@@ -32,7 +32,7 @@ void searchProductPrice(Product *p, int count){
     int search=0;
 
     printf("검색할 가격대?(입력한 가격대 이상의 제품을 출력) ");
-    scanf("%d", search);
+    scanf("%d", &search);
     printf("\nNo  Name  Desc  Weight   price   method\n");
     printf("====================================\n");
     for(int i=0; i<count; i++){
@@ -54,7 +54,7 @@ void searchProductMethod(Product *p, int count){
     int search=0;
 
     printf("검색할 제품배송 방법? ");
-    scanf("%s", search);
+    scanf("%s", &search);
     printf("\nNo  Name  Desc  Weight   price   method\n");
     printf("====================================\n");
     for(int i=0; i<count; i++){
