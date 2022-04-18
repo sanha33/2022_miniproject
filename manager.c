@@ -29,15 +29,15 @@ void searchProductName(Product *p, int count){
 
 void searchProductPrice(Product *p, int count){
     int scnt = 0;
-    char search[20];
+    int search=0;
 
-    printf("검색할 이름? ");
-    scanf("%s", search);
+    printf("검색할 가격대?(입력한 가격대 이상의 제품을 출력) ");
+    scanf("%d", search);
     printf("\nNo  Name  Desc  Weight   price   method\n");
     printf("====================================\n");
     for(int i=0; i<count; i++){
         if(p[i].price == -1) continue;
-        if(strstr(p[i].name,search)){
+        if(p[i].price>= search){
             printf("%2d ",i+1);
             readProduct(p[i]);   
             scnt++;
