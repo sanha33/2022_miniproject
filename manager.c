@@ -54,12 +54,12 @@ void searchProductMethod(Product *p, int count){
     int search=0;
 
     printf("검색할 제품배송 방법? ");
-    scanf("%s", &search);
+    scanf("%ls", &search);
     printf("\nNo  Name  Desc  Weight   price   method\n");
     printf("====================================\n");
     for(int i=0; i<count; i++){
         if(p[i].price == -1) continue;
-        if(p[i].method==search)){
+        if(p[i].method==search){
             printf("%2d ",i+1);
             readProduct(p[i]);   
             scnt++;
