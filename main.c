@@ -12,7 +12,7 @@ int main(void){
     int count=0;
     int menu;
    // int result = 0;
-
+    int search = 0;
 
     count = loadData(list); 
     index = count;
@@ -62,8 +62,24 @@ int main(void){
             savaData(list,index);
         }
         else if(menu == 6){
-           searchProduct(list,count);
-            
+     		printf("어떤 검색을 하시겠습니까?\n");
+		printf("1.제품명 검색 2.제품가격대 검색 3.제품배송방법 검색\n");
+		scanf("%d",&search);
+		while(1){
+		if(search==1){
+	  	searchProductName(list,count);
+		break;
+		}else if(search==2){
+			searchProductPrice(list,count);
+			break;
+		}else if(search==3){
+			searchProductMethod(list,count);
+			break;
+		}else{
+			printf("다시 입력하세요.(1.제품명 검색 2.제품가격대 검색 3. 제품배송방법 검색)\n"
+		}
+		
+		}
         }
     }
     printf("종료됨!\n");
