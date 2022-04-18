@@ -54,7 +54,7 @@ void searchProductMethod(Product *p, int count){
     int search=0;
 
     printf("검색할 제품배송 방법? ");
-    scanf("%ls", &search);
+    scanf("%d", &search);
     printf("\nNo  Name  Desc  Weight   price   method\n");
     printf("====================================\n");
     for(int i=0; i<count; i++){
