@@ -6,7 +6,7 @@
 #include "manager.h"
 
 
-void searchProduct(Product *p, int count){
+void searchProductName(Product *p, int count){
     int scnt = 0;
     char search[20];
 
@@ -26,6 +26,50 @@ void searchProduct(Product *p, int count){
     if(scnt==0) printf("=> 검색된 데이터 없음!");
     printf("\n");
 } 
+
+void searchProductPrice(Product *p, int count){
+    int scnt = 0;
+    char search[20];
+
+    printf("검색할 이름? ");
+    scanf("%s", search);
+    printf("\nNo  Name  Desc  Weight   price   method\n");
+    printf("====================================\n");
+    for(int i=0; i<count; i++){
+        if(p[i].price == -1) continue;
+        if(strstr(p[i].name,search)){
+            printf("%2d ",i+1);
+            readProduct(p[i]);   
+            scnt++;
+        }
+        
+    }
+    if(scnt==0) printf("=> 검색된 데이터 없음!");
+    printf("\n");
+} 
+
+
+void searchProductMethod(Product *p, int count){
+    int scnt = 0;
+    char search[20];
+
+    printf("검색할 이름? ");
+    scanf("%s", search);
+    printf("\nNo  Name  Desc  Weight   price   method\n");
+    printf("====================================\n");
+    for(int i=0; i<count; i++){
+        if(p[i].price == -1) continue;
+        if(strstr(p[i].name,search)){
+            printf("%2d ",i+1);
+            readProduct(p[i]);   
+            scnt++;
+        }
+        
+    }
+    if(scnt==0) printf("=> 검색된 데이터 없음!");
+    printf("\n");
+} 
+
 int loadData(Product *p){
     int i = 0;
     FILE *fp;
