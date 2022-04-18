@@ -76,7 +76,7 @@ int main(void){
 			searchProductMethod(list,count);
 			break;
 		}else{
-			printf("다시 입력하세요.(1.제품명 검색 2.제품가격대 검색 3. 제품배송방법 검색)\n"
+			printf("다시 입력하세요.(1.제품명 검색 2.제품가격대 검색 3. 제품배송방법 검색)\n");
 		}
 		
 		}
